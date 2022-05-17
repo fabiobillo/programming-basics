@@ -14,28 +14,28 @@ let quarter;
 let dime;
 let nickel;
 let penny;
-let remainder;
+let cashRemained;
 
 
 changeAmount= +prompt("How many cents do you have to give to the shopper?")*100;
 
 toonie= Math.floor(changeAmount/200);
-remainder= changeAmount % 200;
+cashRemained= changeAmount % 200;
 
-loonie= Math.floor(remainder/100);
-remainder= remainder % 100;
+loonie= Math.floor(cashRemained/100);
+cashRemained= cashRemained % 100;
 
-quarter= Math.floor(remainder/25);
-remainder= remainder % 25;
+quarter= Math.floor(cashRemained/25);
+cashRemained= cashRemained % 25;
 
-dime= Math.floor(remainder/10);
-remainder= remainder % 10;
+dime= Math.floor(cashRemained/10);
+cashRemained= cashRemained % 10;
 
-nickel= Math.floor(remainder/5);
-remainder= remainder % 5;
+nickel= Math.floor(cashRemained/5);
+cashRemained= cashRemained % 5;
 
-penny= Math.floor(remainder/1);
-remainder= remainder % 1;
+penny= Math.floor(cashRemained/1);
+cashRemained= cashRemained % 1;
 
 alert( `You should give to the shopper these coins: 
 ${toonie+ (" toonies")}, ${loonie+ (" loonies")}, ${quarter+ (" quarters" )}, ${dime+ (" dimes" )}, ${nickel+ (" nickels" )}, ${penny+ (" pennies.")}` );
